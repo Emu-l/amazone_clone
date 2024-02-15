@@ -1,0 +1,15 @@
+/* Carousel.module.css */
+
+.carouselRoot {
+  position: relative;
+}
+
+.carouselGradientOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px; /* Adjust the height of the fading effect */
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 80%);
+  pointer-events: none;
+}
