@@ -31,10 +31,9 @@ function Order() {
       <section className={Classes.container}>
         <div className={Classes.orders_container}>
           <h2>Your orders</h2>
-          {
-            orders?.length == 0 && 
-            <div style={{padding:"20px"}}> You don't have orders yet.</div> 
-          }
+          {orders?.length == 0 && (
+            <div style={{ padding: "20px" }}> You don't have orders yet.</div>
+          )}
           <div>
             {orders?.map((eachOrder, i) => {
               return (
@@ -42,7 +41,9 @@ function Order() {
                   <hr />
                   <p>Order Id: {eachOrder?.id}</p>
                   {eachOrder?.data?.basket?.map((order) => {
-                    return (<ProductCard flex={true} product={order} key={order.id} />)
+                    return (
+                      <ProductCard flex={true} product={order} key={order.id} />
+                    );
                   })}
                 </div>
               );

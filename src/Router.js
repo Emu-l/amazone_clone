@@ -23,11 +23,11 @@ function Routing() {
         <Route path="/signup" element={<Auth />} />
         <Route path="/category/:categoryName" element={<Results />} />
         <Route
-          path="/orders"
+          path="/order"
           element={
             <ProtectedRoute
               msg={"You must log in to acces your orders"}
-              redirect={"/orders"}
+              redirect={"/order"}
             >
               <Order />
             </ProtectedRoute>
